@@ -1,0 +1,26 @@
+truffle compile - компилим .создалось src/abis
+truffle migrate - миграции
+truffle console - открвает консоль
+// const token = await Token.deployed() - создаем переменную токен и начнаем ее токену который извлекается из блокчейна
+token.address - адрес
+token.name()
+token.symbol()
+token.totalSupply()
+web3 - библиотека которая помогает рабоать с блокчной эфириум
+web3.eth.getAccounts()
+const accounts = web3.eth.getAccounts()
+acc = accounts[0]
+dec = await token.decimals()
+dec.toString()
+bal = await token.balanceOf(acc)
+etherBalance = await web3.eth.getBalance(acc)
+etherBalance.toString()
+web3.utils.fromWei(etherBalance)
+web3.utils.toWei('99.94')
+tokenBalance = await token.balanceOf(acc)
+web3.utils.fromWei(tokenBalance) - будет 100 (из примера)
+totalSupply = await token.totalSupply()
+web3.utils.fromWei(totalSupply) - будет 100 (из примера)
+это все было вверху создани смарт-контракта
+
+truffle migrate --reset - берет новую копию смарт-контракта и помещает еее в блокчейн
